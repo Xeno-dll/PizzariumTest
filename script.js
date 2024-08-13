@@ -1,16 +1,22 @@
-document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to fetch and display the content of the text file
+    function loadTextFile(filePath) {
+        fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('fileContent').textContent = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                document.getElementById('fileContent').textContent = 'Failed to load content.';
+            });
+    }
 
-    const orderText = document.getElementById('order').value;
-
-    // Create a new order element
-    const orderElement = document.createElement('div');
-    orderElement.className = 'order-item';
-    orderElement.textContent = orderText;
-
-    // Add the new order to the orders list
-    document.getElementById('ordersList').appendChild(orderElement);
-
-    // Clear the form
-    document.getElementById('orderForm').reset();
+    // Load the text file
+    loadTextFile('data.txt');
 });
