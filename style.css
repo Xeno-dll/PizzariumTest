@@ -1,0 +1,81 @@
+body {
+  color: black;
+  background-color: #fde7ad;
+}
+
+h1 {
+  color: black;
+  font-family: "Verdana", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  font-family: "Verdana", sans-serif;
+  text-align: center;
+}
+
+p {
+  color: black;
+  font-family: "Verdana", sans-serif;
+  text-align: center;  
+}
+
+.big-a {
+  font-size: 16px;
+  font-family: "Verdana", sans-serif;  
+}
+
+div {
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Verdana", sans-serif;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.header-container {
+  align-items: center; 
+  justify-content: center;
+  text-align: center; 
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.center-button {
+    display: inline-block; /* Buton gibi görünmesini sağlar */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Buton rengi */
+    text-align: center;
+    text-decoration: none; /* Alt çizgi kaldırılır */
+    border-radius: 5px; /* Köşeleri yuvarlatır */
+}
