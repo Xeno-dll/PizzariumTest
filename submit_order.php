@@ -1,10 +1,14 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $order = trim($_POST['order']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $pizza = htmlspecialchars($_POST['pizza']);
+    $address = htmlspecialchars($_POST['address']);
 
-    if (!empty($order)) {
-        $file = 'orders.txt';
-        file_put_contents($file, $order . PHP_EOL, FILE_APPEND | LOCK_EX);
-    }
+    // You can process the data here, e.g., save it to a database or send an email
+
+    // For demonstration purposes, we'll just return a success message
+    echo "Order received! Name: $name, Pizza: $pizza, Address: $address";
+} else {
+    echo "Invalid request.";
 }
 ?>
